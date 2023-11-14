@@ -123,9 +123,6 @@ export GTK_USE_PORTAL=1
 export XDG_CURRENT_DESKTOP=KDE
 export PATH="/home/bernd/.local/bin:$PATH"
 
-# Mount Google Drive 
-alias gdrive="rclone mount gdrive: ~/GDrive --daemon" 
-
 # edit config shortcuts
 alias v="vim"
 alias zshconf="vim ~/.zshrc"
@@ -133,7 +130,6 @@ alias ohmyzshconf="vim ~/.oh-my-zsh"
 alias mpvconf="vim ~/.config/mpv/mpv.conf"
 alias mpvinputconf="vim ~/.config/mpv/input.conf"
 alias muttconf="vim ~/.config/mutt/muttrc"
-alias muttwizardconf="vim /usr/share/mutt-wizard/mutt-wizard.muttrc"
 alias vimconf="vim ~/.vimrc"
 alias ls="ls --color=auto"
 alias myip="curl http://ipecho.net/plain; echo"

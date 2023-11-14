@@ -48,7 +48,6 @@ set smarttab
 set expandtab
 set backspace=eol,start,indent
 set whichwrap-=Left,Right
-" Ignore case when searching
 set ignorecase " Ignore case when searching
 set hlsearch " Highlight search results
 set magic " For regular expressions turn magic on
@@ -58,32 +57,25 @@ set noerrorbells " No annoying sound on errors
 " set novisualbell "disables the visual cue (like flashing the screen) that indicates an error or alert in place of an audible bell.
 set t_vb=
 set tm=500
-" Add a bit extra margin to the left
-set foldcolumn=1
-" Turn on the Wild menu
-set wildmenu
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
+set foldcolumn=1 " Add a bit extra margin to the left
+set wildmenu " Turn on the Wild menu
+set wildignore=*.o,*~,*.pyc " Ignore compiled files
 if has("win16") || has("win32")
     set wildignore+=.git\*,.hg\*,.svn\*
 else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
-" Makes search act like search in modern browsers
-set incsearch
+set incsearch " Makes search act like search in modern browsers
 set encoding=UTF-8
 set ffs=unix,dos,mac
-" Change default clipboard buffer
-set clipboard=unnamedplus
+set clipboard=unnamedplus " Change default clipboard buffer
 set mouse=a
-" Set spellcheck language
-set spelllang=ru_ru
-" Reduce delay when switching from Insert mode to Normal mode using the `<Esc>` key
-set ttimeoutlen=10
+set spelllang=ru_ru " Set spellcheck language
+set ttimeoutlen=10 " Reduce delay when switching from Insert mode to Normal mode using the `<Esc>` key
 highlight Normal guibg=black guifg=white
 
-
 """" Custom mappings
+
 " The imap command is used to create the mapping so that it only applies while in insert mode
 imap jj <Esc>
 nnoremap <C-/> :nohlsearch<CR>
@@ -98,7 +90,7 @@ vnoremap D "_D
 "create an empty line below the current cursor position without entering insert mode
 nnoremap _ :put_<CR>
 " toggle spellchecking
-noremap <C-s> :setlocal spell! spelllang=ru<CR>
+noremap <C-s> :setlocal spell! spelllang=ru<CR> 
 inoremap <C-s> :setlocal spell! spelllang=ru<CR>
 " Better tab experience - from https://webdevetc.com/
 map <leader>tn :tabnew<cr>
@@ -106,9 +98,9 @@ map <leader>tt :tabnext<cr>
 map <leader>tm :tabmove
 map <leader>tw :tabclose<cr>
 map <leader>to :tabonly<cr>
-" prevent Vim from clearing the clipboard upon exit
-autocmd VimLeave * call system("xsel -ib", getreg('+'))
-" Plugin settings 
+autocmd VimLeave * call system("xsel -ib", getreg('+')) " prevent Vim from clearing the clipboard upon exit
+
+"""" Plugin settings 
 
 " Start NERDTree and leave the cursor in it.
 " autocmd VimEnter * NERDTree /home/bernd/Documents
@@ -131,9 +123,7 @@ let g:startify_lists = [
             \ { 'type': 'bookmarks', 'header':startify#center( ['   Bookmarks'])      },
             \ ]
 
-" Adding bookmarks
-let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}]
-
+let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}] " Adding bookmarks
 " Show random ascii art from a text file
 let ascii_files = glob('/home/bernd/Documents/ascii/*.txt', 0, 1)
 let rand = system('shuf -i 0-' . string(len(ascii_files) - 1) . ' -n 1')
