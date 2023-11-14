@@ -119,16 +119,16 @@ set noshowmode
 "let g:startify_custom_header = ["test"]
 
 let g:startify_lists = [
-            \ { 'type': 'files',     'header':startify#center(['   MRU'])            },
-            \ { 'type': 'bookmarks', 'header':startify#center( ['   Bookmarks'])      },
+            \ { 'type': 'files',     'header':['   MRU']            },
+            \ { 'type': 'bookmarks', 'header':['   Bookmarks']      },
             \ ]
 
 let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}] " Adding bookmarks
 " Show random ascii art from a text file
-let ascii_files = glob('/home/bernd/Documents/ascii/*.txt', 0, 1)
-let rand = system('shuf -i 0-' . string(len(ascii_files) - 1) . ' -n 1')
-let g:startify_custom_header = startify#center(readfile(ascii_files[rand]))
-highlight StartifyHeader ctermfg=white
+"let ascii_files = glob('/home/bernd/Documents/ascii/*.txt', 0, 1)
+"let rand = system('shuf -i 0-' . string(len(ascii_files) - 1) . ' -n 1')
+"let g:startify_custom_header = startify#center(readfile(ascii_files[rand]))
+"highlight StartifyHeader ctermfg=white
 
 " Vim-wiki 
 let g:vimwiki_list = [{'path': '/home/bernd/MEGA/googledrive/textDB/vim-wiki', 'syntax': 'markdown', 'ext': '.md'}]
