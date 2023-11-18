@@ -136,6 +136,6 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vw="vim -c VimwikiIndex"
 alias diary="vim -c VimwikiDiaryIndex"
-alias todo="vim MEGA/googledrive/textDB/vim-wiki/tasks.md"
+alias todo="vim ~/MEGA/googledrive/textDB/vim-wiki/tasks.md"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

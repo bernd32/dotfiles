@@ -20,6 +20,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'sainnhe/gruvbox-material'
 Plugin 'pacokwon/onedarkhc.vim'
 Plugin 'sainnhe/sonokai'
+Plugin 'yasukotelin/notelight'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,10 +36,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 "   non-Plugin stuff after this line
 "
+set guifont=Liberation\ Mono\ Regular\ 18 " For gVim
 set linebreak
 set relativenumber
 set background=dark
-"colorscheme sonokai 
 syntax on 
 set number
 set ruler
@@ -134,4 +135,4 @@ highlight StartifyHeader ctermfg=white
 let g:vimwiki_list = [{'path': '/home/bernd/MEGA/googledrive/textDB/vim-wiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_listsyms = '○◐✗○●✓'
-
+colorscheme notelight
