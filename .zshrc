@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-export EDITOR='vim'
+export EDITOR='/usr/bin/vim'
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_CTYPE=ja_JP.UTF-8

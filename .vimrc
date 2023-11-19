@@ -84,7 +84,6 @@ nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <F2> :NERDTreeToggle /home/bernd/MEGA/googledrive/textDB/<CR>
 nnoremap <F3> :browse oldfiles<CR>
 " not copying text to the default register when deleting
-nnoremap dd "_dd
 nnoremap D "_D
 vnoremap d "_d
 vnoremap D "_D
@@ -99,6 +98,10 @@ map <leader>tt :tabnext<cr>
 map <leader>tm :tabmove
 map <leader>tw :tabclose<cr>
 map <leader>to :tabonly<cr>
+" Insert current date stamp
+inoremap <F5> <C-R>=strftime("%c")<CR>
+nnoremap <F5> "=strftime("%c")<CR>P
+
 autocmd VimLeave * call system("xsel -ib", getreg('+')) " prevent Vim from clearing the clipboard upon exit
 
 """" Plugin settings 
