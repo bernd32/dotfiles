@@ -26,6 +26,8 @@ BULLETTRAIN_PROMPT_ORDER=(
   git
   dir
 )
+export TYPEWRITTEN_SYMBOL="λ" 
+export TYPEWRITTEN_LEFT_PROMPT_PREFIX="$(uname -n)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -137,5 +139,5 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vw="vim -c VimwikiIndex"
 alias diary="vim -c VimwikiDiaryIndex"
 alias todo="vim MEGA/googledrive/textDB/vim-wiki/tasks.md"
-
+alias awconf="vim ~/.config/awesome/rc.lua"
 # source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
