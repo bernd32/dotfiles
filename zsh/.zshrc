@@ -9,7 +9,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-# Edit line in nvim with ctrl+e
+# Edit line in vim with ctrl+e
 autoload edit-command-line; zle -N edit-command-line
 bindkey "^e" edit-command-line
 
@@ -100,9 +100,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
+#   export EDITOR='vim'
 # else
-#   export EDITOR='mnvim'
+#   export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -114,8 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-export EDITOR='/usr/bin/nvim'
+export EDITOR='/usr/bin/vim'
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
@@ -124,19 +123,19 @@ export XDG_CURRENT_DESKTOP=KDE
 export PATH="/home/bernd/.local/bin:$PATH"
 
 # edit config shortcuts
-alias v="nvim"
-alias zshconf="nvim ~/.zshrc"
-alias ohmyzshconf="nvim ~/.oh-my-zsh"
-alias mpvconf="nvim ~/.config/mpv/mpv.conf"
-alias mpvinputconf="nvim ~/.config/mpv/input.conf"
-alias muttconf="nvim ~/.config/mutt/muttrc"
-alias vimconf="nvim ~/.nvimrc"
+alias v="vim"
+alias zshconf="vim ~/.zshrc"
+alias ohmyzshconf="vim ~/.oh-my-zsh"
+alias mpvconf="vim ~/.config/mpv/mpv.conf"
+alias mpvinputconf="vim ~/.config/mpv/input.conf"
+alias muttconf="vim ~/.config/mutt/muttrc"
+alias vimconf="vim ~/.vimrc"
 alias ls="ls --color=auto"
 alias myip="curl http://ipecho.net/plain; echo"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias vw="nvim -c vimwikiIndex"
-alias diary="nvim -c vimwikiDiaryIndex"
-alias todo="nvim ~/MEGA/googledrive/textDB/vim-wiki/tasks.md"
-alias nv="/usr/bin/nvim"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias vw="vim -c vimwikiIndex"
+alias diary="vim -c vimwikiDiaryIndex"
+alias todo="vim ~/MEGA/googledrive/textDB/vim-wiki/tasks.md"
+alias nv="/usr/bin/vim"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
