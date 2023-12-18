@@ -5,7 +5,6 @@ filetype off                  " required
 set guifont=Liberation\ Mono\ Regular\ 18 " For gVim
 set linebreak
 set relativenumber
-set background=dark
 syntax on 
 set number
 set ruler

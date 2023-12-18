@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export BORG_REPO="/run/media/bernd/HITACHI_TOURO_4T/Backups/arch_pc/"
 
 # History settings
 HISTSIZE=10000
@@ -113,16 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-export EDITOR='/usr/bin/vim'
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-export LC_CTYPE=ja_JP.UTF-8
-export GTK_USE_PORTAL=1
-export XDG_CURRENT_DESKTOP=KDE
-export PATH="/home/bernd/.local/bin:$PATH"
 
-# edit config shortcuts
 alias v="vim"
 alias zshconf="vim ~/.zshrc"
 alias ohmyzshconf="vim ~/.oh-my-zsh"
@@ -137,5 +129,6 @@ alias vw="vim -c vimwikiIndex"
 alias diary="vim -c vimwikiDiaryIndex"
 alias todo="vim ~/MEGA/googledrive/textDB/vim-wiki/tasks.md"
 alias nv="/usr/bin/vim"
-
+alias vps-backup="/home/bernd/Documents/scripts/bash/vps-backup.sh"
+alias db-vps-backup="/home/bernd/Documents/scripts/bash/db-daily-backup.sh"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

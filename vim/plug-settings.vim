@@ -12,25 +12,15 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vimwiki/vimwiki'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mhinz/vim-startify'
+" Color schemes 
 Plugin 'sainnhe/gruvbox-material'
 Plugin 'pacokwon/onedarkhc.vim'
 Plugin 'sainnhe/sonokai'
 Plugin 'yasukotelin/notelight'
-" All of your Plugins must be added before the following line
+Plugin 'tomasiser/vim-code-dark'
 call vundle#end()            " required
+
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-"   non-Plugin stuff after this line
-"" Start NERDTree and leave the cursor in it.
 
 " autocmd VimEnter * NERDTree /home/bernd/Documents
 let g:vim_markdown_folding_disabled = 1
@@ -63,4 +53,9 @@ highlight StartifyHeader ctermfg=white
 let g:vimwiki_list = [{'path': '~/MEGA/googledrive/textDB/vim-wiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:vimwiki_listsyms = '○◐✗○●✓'
-colorscheme notelight
+let g:airline_theme = 'codedark'
+let g:codedark_modern=1
+" Activates italicized comments (make sure your terminal supports italics)
+let g:codedark_italics=1
+set background=dark
+colorscheme codedark
